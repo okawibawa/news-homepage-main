@@ -5,29 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
 
     <link rel="stylesheet" href="/assets/styles/styles.module.css" />
 
     <title>Frontend Mentor | News homepage</title>
   </head>
-  <body>
-    <nav class="navigation">
+  <body class="body--container">
+    <nav class="navigation--desktop">
       <a href="/" class="navigation--logo">
         <img src="/assets/images/logo.svg" alt="news home page main logo" />
       </a>
 
       <div class="navigation--link-container">
         <a href="/" class="navigation--link">Home</a>
-        <a href="#" class="navigation--link">New</a>
+        <a href="#" class="avigation--link">New</a>
         <a href="#" class="navigation--link">Popular</a>
         <a href="#" class="navigation--link">Trending</a>
         <a href="#" class="navigation--link">Categories</a>
+      </div>
+
+      <button>
+        <img src="/assets/images/icon-menu.svg" alt="hamburger menu mobile" />
+      </button>
+    </nav>
+
+    <div class="full-width navigation--mobile-overlay"></div>
+
+    <nav class="full-width navigation--mobile">
+      <button class="navigation--mobile-close-icon">
+        <img src="/assets/images/icon-menu-close.svg" alt="icon menu close mobile" />
+      </button>
+
+      <div class="navigation--link-mobile-container">
+        <a href="/" class="navigation--link-mobile">Home</a>
+        <a href="#" class="navigation--link-mobile">New</a>
+        <a href="#" class="navigation--link-mobile">Popular</a>
+        <a href="#" class="navigation--link-mobile">Trending</a>
+        <a href="#" class="navigation--link-mobile">Categories</a>
       </div>
     </nav>
 
@@ -37,9 +52,8 @@
           <h1>The Bright Future of Web 3.0?</h1>
 
           <p>
-            We dive into the next evolution of the web that claims to put the
-            power of the platforms back into the hands of the people. But is it
-            really fulfilling its promise?
+            We dive into the next evolution of the web that claims to put the power of the platforms back into the hands
+            of the people. But is it really fulfilling its promise?
           </p>
 
           <button type="button">Read more</button>
@@ -56,18 +70,12 @@
 
             <div>
               <h3>The Downsides of AI Artistry</h3>
-              <p>
-                What are the possible adverse effects of on-demand AI image
-                generation?
-              </p>
+              <p>What are the possible adverse effects of on-demand AI image generation?</p>
             </div>
 
             <div>
               <h3>Is VC Funding Drying Up?</h3>
-              <p>
-                Private funding by VC firms is down 50% YOY. We take a look at
-                what that means.
-              </p>
+              <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
             </div>
           </div>
         </section>
@@ -101,9 +109,8 @@
 
     <div class="attribution">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+      <a href="#">Your Name Here</a>.
     </div>
   </body>
 </html>

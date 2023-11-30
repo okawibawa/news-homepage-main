@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
 /* --- Variables --- */
 :root {
   --primary-soft-orange: hsl(35, 77%, 62%);
@@ -20,9 +25,7 @@
     - The "symbol *" part is to solve Firefox SVG sprite bug
     - The "html" attribute is exclud, because otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
  */
-*:where(
-    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
-  ) {
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
   all: unset;
   display: revert;
 }
@@ -118,20 +121,89 @@ meter {
 }
 
 /* Base Rules */
-body {
+.body--container {
+  --padding-inline: 1rem;
+  --content-max-width: 900px;
+
+  font-family: "Inter";
+  font-weight: 400;
+  position: relative;
+  display: grid;
+  grid-template-columns:
+    [full-width-start] minmax(var(--padding-inline), 1fr) [content-start] min(
+      100% - (var(--padding-inline) * 2),
+      var(--content-max-width)
+    )
+    [content-end] minmax(var(--padding-inline), 1fr) [full-width-end];
+}
+
+.body--container > :not(.full-width) {
+  grid-column: content;
+}
+
+.body--container > .full-width {
+  grid-column: full-width;
 }
 
 /* --- Navigation Styles --- */
-.navigation {
+.navigation--desktop {
   display: flex;
   justify-content: space-between;
+  padding: 1rem 0;
 }
 
 .navigation--logo img {
-  width: 32px;
+  width: 40px;
   height: auto;
 }
 
 .navigation--link-container {
   display: none;
+}
+
+.navigation--mobile-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 500ms ease-in-out;
+}
+
+.navigation--mobile-overlay.active {
+  visibility: visible;
+  opacity: 0.5;
+}
+
+.navigation--mobile {
+  background-color: white;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 75%;
+  max-width: 320px;
+  transform: translateX(100%);
+  transition: all 500ms ease-in-out;
+}
+
+.navigation--mobile.active {
+  transform: translateX(0);
+}
+
+.navigation--mobile-close-icon {
+  display: block !important;
+  margin-left: auto;
+  margin-bottom: 4rem;
+}
+
+.navigation--link-mobile-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.navigation--link-mobile {
 }

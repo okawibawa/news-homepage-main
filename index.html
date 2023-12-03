@@ -5,57 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
     <link rel="stylesheet" href="/assets/styles/styles.module.css" />
 
     <title>Frontend Mentor | News homepage</title>
   </head>
   <body class="body--container">
-    <nav class="navigation--desktop">
-      <a href="/" class="navigation--logo">
-        <img src="/assets/images/logo.svg" alt="news home page main logo" />
-      </a>
+    <header>
+      <nav class="navigation">
+        <a href="/" class="navigation--logo">
+          <img src="/assets/images/logo.svg" alt="news home page main logo" />
+        </a>
 
-      <div class="navigation--link-container">
-        <a href="/" class="navigation--link">Home</a>
-        <a href="#" class="avigation--link">New</a>
-        <a href="#" class="navigation--link">Popular</a>
-        <a href="#" class="navigation--link">Trending</a>
-        <a href="#" class="navigation--link">Categories</a>
-      </div>
+        <div class="navigation--desktop-link-container">
+          <a href="/" class="navigation--desktop-link">Home</a>
+          <a href="#" class="navigation--desktop-link">New</a>
+          <a href="#" class="navigation--desktop-link">Popular</a>
+          <a href="#" class="navigation--desktop-link">Trending</a>
+          <a href="#" class="navigation--desktop-link">Categories</a>
+        </div>
 
-      <button id="hamburger-menu">
-        <img src="/assets/images/icon-menu.svg" alt="hamburger menu mobile" />
-      </button>
-    </nav>
+        <button
+          id="hamburger-menu"
+          class="navigation--desktop-hamburger-button"
+        >
+          <img src="/assets/images/icon-menu.svg" alt="hamburger menu mobile" />
+        </button>
+      </nav>
 
-    <div id="navigation-mobile-overlay" class="full-width navigation--mobile-overlay"></div>
+      <div
+        id="navigation-mobile-overlay"
+        class="full-width navigation--mobile-overlay"
+      ></div>
 
-    <nav id="navigation-mobile" class="full-width navigation--mobile">
-      <button id="close-menu" class="navigation--mobile-close-icon">
-        <img src="/assets/images/icon-menu-close.svg" alt="icon menu close mobile" />
-      </button>
+      <nav id="navigation-mobile" class="full-width navigation--mobile">
+        <button id="close-menu" class="navigation--mobile-close-button">
+          <img
+            src="/assets/images/icon-menu-close.svg"
+            alt="icon menu close mobile"
+          />
+        </button>
 
-      <div class="navigation--link-mobile-container">
-        <a href="/" class="navigation--link-mobile">Home</a>
-        <a href="#" class="navigation--link-mobile">New</a>
-        <a href="#" class="navigation--link-mobile">Popular</a>
-        <a href="#" class="navigation--link-mobile">Trending</a>
-        <a href="#" class="navigation--link-mobile">Categories</a>
-      </div>
-    </nav>
+        <div class="navigation--link-mobile-container">
+          <a href="/" class="navigation--link-mobile">Home</a>
+          <a href="#" class="navigation--link-mobile">New</a>
+          <a href="#" class="navigation--link-mobile">Popular</a>
+          <a href="#" class="navigation--link-mobile">Trending</a>
+          <a href="#" class="navigation--link-mobile">Categories</a>
+        </div>
+      </nav>
+    </header>
 
     <main class="main">
       <section class="hero--section">
-        <img src="/assets/images/image-web-3-desktop.jpg" alt="web3 mobile hero" />
+        <img
+          class="hero--section-mobile-image"
+          src="/assets/images/image-web-3-mobile.jpg"
+          alt="web3 mobile hero"
+        />
+        <img
+          class="hero--section-desktop-image"
+          src="/assets/images/image-web-3-desktop.jpg"
+          alt="web3 mobile hero"
+        />
 
         <div class="hero--section-details">
           <h1 class="hero--section-title">The Bright Future of Web 3.0?</h1>
 
           <p class="hero--section-description">
-            We dive into the next evolution of the web that claims to put the power of the platforms back into the hands
-            of the people. But is it really fulfilling its promise?
+            We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is it
+            really fulfilling its promise?
           </p>
 
           <button onclick="" class="hero--section-cta">Read more</button>
@@ -66,46 +92,64 @@
         <h2>New</h2>
 
         <div>
-          <div class="side--news-news-container">
+          <a href="#" class="side--news-news-container">
             <h3>Hydrogen VS Electric Cars</h3>
             <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
-          </div>
+          </a>
 
-          <div class="side--news-news-container">
+          <a href="#" class="side--news-news-container">
             <h3>The Downsides of AI Artistry</h3>
-            <p>What are the possible adverse effects of on-demand AI image generation?</p>
-          </div>
+            <p>
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </a>
 
-          <div class="side--news-news-container">
+          <a href="#" class="side--news-news-container">
             <h3>Is VC Funding Drying Up?</h3>
-            <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
-          </div>
+            <p>
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </a>
         </div>
       </section>
 
       <section class="bottom-news">
-        <div class="bottom-news-news">
-          <img class="bottom-news-news-image" src="/assets/images/image-retro-pcs.jpg" alt="retro pc news" />
+        <a href="#" class="bottom-news-news">
+          <img
+            class="bottom-news-news-image"
+            src="/assets/images/image-retro-pcs.jpg"
+            alt="retro pc news"
+          />
 
           <div class="bottom-news-news-details">
             <p>01</p>
             <h4>Reviving Retro PCs</h4>
             <p>What happens when old PCs are given modern upgrades?</p>
           </div>
-        </div>
+        </a>
 
-        <div class="bottom-news-news">
-          <img class="bottom-news-news-image" src="/assets/images/image-top-laptops.jpg" alt="top laptop news" />
+        <a href="#" class="bottom-news-news">
+          <img
+            class="bottom-news-news-image"
+            src="/assets/images/image-top-laptops.jpg"
+            alt="top laptop news"
+          />
 
           <div class="bottom-news-news-details">
             <p>02</p>
             <h4>Top 10 Laptops of 2022</h4>
             <p>Our best picks for various needs and budgets.</p>
           </div>
-        </div>
+        </a>
 
-        <div class="bottom-news-news">
-          <img class="bottom-news-news-image" src="/assets/images/image-gaming-growth.jpg" alt="growth gaming news" />
+        <a href="#" class="bottom-news-news">
+          <img
+            class="bottom-news-news-image"
+            src="/assets/images/image-gaming-growth.jpg"
+            alt="growth gaming news"
+          />
 
           <div class="bottom-news-news-details">
             <p>03</p>
@@ -113,7 +157,7 @@
 
             <p>How the pandemic has sparked fresh opportunities.</p>
           </div>
-        </div>
+        </a>
       </section>
     </main>
 
